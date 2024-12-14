@@ -1,7 +1,7 @@
 from lesson7 import result
 
 try:
-    result =10/2
+    result =10/1
 
 except ZeroDivisionError:
     print("Division by zero has accoured")
@@ -16,6 +16,8 @@ else:
 
 finally:
     print("Finally the block is executed")
+
+
 
 
 
