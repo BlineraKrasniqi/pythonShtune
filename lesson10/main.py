@@ -1,3 +1,6 @@
+from tkinter.font import names
+
+
 class Student:
     def __init__(self, name, age):
         self.__name = name
