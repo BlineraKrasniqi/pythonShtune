@@ -27,25 +27,7 @@
 # # student1.set_age(17)
 # # print("Updated age:", student1.get_age())
 from abc import abstractmethod
-
-
-class Printalble(ABC):
-
-    @abstractmethod
-    def print_info(self):
-        pass
-
-    class Book(Printable):
-        def __init__(self, title, author):
-            self.title = title
-            self.author = author
-
-        def print_info(self):
-            print(f"Book: {self.title} by {self.author}")
-
-book = Book ("fuqia e se tashmes", "Ismail Kadare")
-
-book.print_info()
+from functools import singledispatchmethod
 
 
 
@@ -80,3 +62,24 @@ book.print_info()
 #
 # print(circle_1.area())
 # print(square_1.area())
+
+from abc import abstractmethod
+
+
+class Printalble(ABC):
+
+    @abstractmethod
+    def print_info(self):
+        pass
+
+    class Singer(compositor):
+        def __init__(self, title, compositor):
+            self.title = title
+            self.compositor = compositor
+
+        def print_info(self):
+            print(f"Song: {self.title} by {self.compositor}")
+
+Song = Song ("Trendafili by Dhjetori compositor Bekim Kepuska")
+
+song.print_info()
