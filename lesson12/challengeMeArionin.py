@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 
-from PIL.ImagePalette import wedge
-
 
 class Person(ABC):
     def __init__(self,name,age,weight,height):
