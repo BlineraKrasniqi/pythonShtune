@@ -1,5 +1,6 @@
 import datetime
 import datetime
+import os.path
 
 currentdatetime = datetime.datetime.now()
 
@@ -32,5 +33,23 @@ print(minusdays)
 with open("example.txt", "w") as file:
     print("Hello world")
 
+file_path = "example.txt"
+file = open(file_path, "r")
+
+content = file.read()
+print(content)
+file.close()
+
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+    print(lines)
+
+with open ("example.txt", "r") as file:
+    line = file.readline()
+    print(line)
+
+
+if os.path.exists("example.txt"):
+    print("file exists!")
 
 
